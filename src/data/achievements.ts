@@ -9,4 +9,5 @@ export const achievementsData: ISectionCardData[] = [
     snippetCount: 0,
     progress: 100,
   },
+
 ];

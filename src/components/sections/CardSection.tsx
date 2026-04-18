@@ -19,15 +19,19 @@ const CardSection: FC<CardSectionProps> = ({ title, id, data }) => {
               <div className="text-2xl font-bold text-white tracking-tight">{title}</div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                {data.map((card) => (
-                    <Card
-                        href={card.href}
-                        key={card.id}
-                        title={card.title}
-                        src={card.src}
-                        exp={card.exp}
-                    />
-                ))}
+                {data.map((card) => {
+                    const cardId = card.title.toLowerCase().replace(/\s+/g, '-');
+                    return (
+                        <div id={cardId} key={card.id}>
+                            <Card
+                                href={card.href}
+                                title={card.title}
+                                src={card.src}
+                                exp={card.exp}
+                            />
+                        </div>
+                    );
+                })}
             </div>
         </section>
     );
