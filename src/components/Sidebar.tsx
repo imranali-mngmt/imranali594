@@ -2,6 +2,7 @@
 import { FC } from 'react';
 import Logo from './sidebar/Logo';
 import Menu from './sidebar/Menu';
+import Search from './sidebar/Search';
 import { useMenu } from './Provider';
 
 interface SideBarProps {}
@@ -18,6 +19,7 @@ const SideBar: FC<SideBarProps> = ({}) => {
 
             <div className="toggle flex flex-col lg:m-5 w-full">
                 <Logo />
+                <Search />
                 <Menu />
             </div>
         </aside>

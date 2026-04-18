@@ -4,46 +4,33 @@
 
 html {
     color-scheme: dark;
+    scroll-behavior: smooth;
 }
 
 :root {
     /* Background */
-    --bg-primary: #14131a;
-    --card-primary: #1c1b23;
+    --bg-primary: #0a0a0c;
+    --card-primary: #121214;
 
-    /* Button */
+    /* Button / Accent */
     --btn-highlight: #2bd576;
-    --btn-primary: #3a3942;
-    --btn-secondary: #1c1b23;
+    --btn-primary: #1e1e22;
+    --btn-secondary: #121214;
 
     /* Text */
-    --text-primary: #8b8a91;
-    --text-secondary: #79787f;
-    --text-info: #4f4f52;
-    --text-highlight: #fff;
+    --text-primary: #a1a1aa;
+    --text-secondary: #71717a;
+    --text-info: #52525b;
+    --text-highlight: #ffffff;
+    
+    /* Brand Accent */
+    --color-primary: #2bd576;
 }
-
-/* @media (prefers-color-scheme: dark) {
-    :root {
-    }
-} */
 
 body {
-    color: var(--foreground-rgb);
+    color: var(--text-primary);
     background: var(--bg-primary);
-}
-
-.progress-bar {
-    width: 100%;
-    height: 7px;
-    background-color: #ccc;
-    position: absolute;
-    bottom: 0;
-    border-radius: 0 0 8px 8px;
-}
-
-.toggle-button:target + #toggle {
-    display: flex;
+    overflow-x: hidden;
 }
 
 .spinner {
@@ -54,6 +41,7 @@ body {
     padding: 3px;
     overflow: visible;
 }
+
 .spinner > circle {
     fill: none;
     stroke: currentColor;
@@ -67,26 +55,18 @@ body {
 
 /* Scroll bar */
 ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 6px;
 }
 
-/* Define the scrollbar track (background) */
 ::-webkit-scrollbar-track {
-    background: transparent; /* Background color of the track */
+    background: transparent;
 }
 
-/* Define the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-    background: hsla(0, 0%, 0%, 0.4); /* Background color of the thumb */
-    border-radius: 6px; /* Rounded corners for the thumb */
+    background: #27272a;
+    border-radius: 10px;
 }
 
-/* Define the scrollbar thumb when hovered over */
 ::-webkit-scrollbar-thumb:hover {
-    background: hsla(
-        0,
-        0%,
-        0%,
-        0.5
-    ); /* Background color of the thumb when hovered */
+    background: #3f3f46;
 }

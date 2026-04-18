@@ -1,30 +1,24 @@
 import Image from 'next/image';
 import { FC } from 'react';
-import List from './List';
-import { Code, History } from 'lucide-react';
 import Link from 'next/link';
 
 interface CardProps {
     title: string;
-    snippetCount: number;
-    exp: string;
     src: string;
-    progress: number;
+    exp: string;
     href?: string;
 }
 
 const Card: FC<CardProps> = ({
     title,
-    snippetCount,
-    exp,
     src,
+    exp,
     href,
-    progress,
 }) => {
     return (
-        <div className="flex flex-col gap-3">
-            <Link target="_blank" href={href || '/'}>
-                <div className="relative aspect-video rounded-lg overflow-hidden">
+        <div className="flex flex-col gap-4 bg-[#1a1921] border border-white/5 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300">
+            <Link target="_blank" href={href || '#'}>
+                <div className="relative aspect-video w-full overflow-hidden">
                     <Image
                         src={src}
                         alt={title}
@@ -32,18 +26,13 @@ const Card: FC<CardProps> = ({
                         className="object-cover"
                         unoptimized
                     />
-                    <div className="progress-bar">
-                        <div
-                            className="h-full bg-btnHighlight"
-                            style={{
-                                width: `${progress}%`,
-                            }}
-                        />
-                    </div>
                 </div>
             </Link>
-            <div className="grid gap-2 px-2 pb-2">
-                <div className="text-highlight font-bold">{title}</div>
+            <div className="flex flex-col px-4 pb-5 gap-2">
+                <div className="text-white font-bold text-base leading-tight">{title}</div>
+                <div className="text-zinc-400 text-xs leading-relaxed line-clamp-2">
+                    {exp}
+                </div>
             </div>
         </div>
     );

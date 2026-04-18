@@ -1,18 +1,11 @@
 import { 
   Home, 
-  User, 
   GraduationCap, 
   Contact, 
   Github, 
-  Linkedin, 
-  ScreenShare, 
-  Layers,
-  Briefcase,
-  Trophy,
-  Cpu,
   Database,
-  Search,
-  Settings
+  Settings,
+  Cpu
 } from 'lucide-react';
 
 export const navigationLinks = [
@@ -20,13 +13,25 @@ export const navigationLinks = [
     name: 'Home',
     icon: Home,
     type: 'link',
-    href: '/',
+    href: '#home',
   },
   {
-    name: 'About Me',
-    icon: Search,
-    type: 'modal',
-    modalType: 'about',
+    name: 'Backend Tech',
+    icon: Database,
+    type: 'link',
+    href: '#backend',
+  },
+  {
+    name: 'Ops & CRM',
+    icon: Settings,
+    type: 'link',
+    href: '#operations',
+  },
+  {
+    name: 'Competencies',
+    icon: Cpu,
+    type: 'link',
+    href: '#competencies',
   },
   {
     name: 'Qualifications',
@@ -44,28 +49,10 @@ export const navigationLinks = [
 
 export const socialLinks = [
   {
-    name: 'Github',
+    name: 'GitHub',
     icon: Github,
     href: 'https://github.com/imranali-dev',
     color: '#2a9d8f',
-  },
-  {
-    name: 'LinkedIn',
-    icon: Linkedin,
-    href: 'https://www.linkedin.com/in/imran-ali13/',
-    color: '#0277b5',
-  },
-  {
-    name: 'Check Out My Work',
-    icon: ScreenShare,
-    href: 'https://imranali.vercel.app/',
-    color: '#e63946',
-  },
-  {
-    name: 'Stack overflow',
-    icon: Layers,
-    href: 'https://stackoverflow.com/users/22816656/imran-ali',
-    color: '#f77f00',
   },
 ];
 
@@ -80,5 +67,5 @@ export const sectionHeadings = {
   experience: 'Professional Experience',
   achievements: 'Key Achievements',
   education: 'Education',
-  projects: 'Projects',
+  projects: 'Featured Projects',
 };

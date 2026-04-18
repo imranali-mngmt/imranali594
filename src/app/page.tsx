@@ -9,21 +9,26 @@ import { pageSections } from '@/data/pageSections';
 
 export default function Home() {
   return (
-    <div>
+    <div className="pb-24">
       <Cover />
-      <div className="flex flex-col gap-10 lg:px-10">
-        <Hero />
+      <div className="flex flex-col gap-20 lg:px-10 mt-12 max-w-7xl mx-auto">
+        <div id="home"><Hero /></div>
         <TechStack />
         
-        {pageSections.map((section) => (
-          <CardSection 
-            key={section.id}
-            title={section.title} 
-            data={section.data} 
-          />
-        ))}
+        <div className="flex flex-col gap-24">
+          {pageSections.map((section) => (
+            <CardSection 
+              key={section.id}
+              id={section.id}
+              title={section.title} 
+              data={section.data} 
+            />
+          ))}
+        </div>
 
-        <ProjectCardSection title={sectionHeadings.projects} data={projectCard} />
+        <div id="projects" className="pt-8 border-t border-white/5">
+          <ProjectCardSection title={sectionHeadings.projects} data={projectCard} />
+        </div>
       </div>
     </div>
   );

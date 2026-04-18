@@ -9,12 +9,4 @@ export const achievementsData: ISectionCardData[] = [
     snippetCount: 0,
     progress: 100,
   },
-  {
-    id: 2,
-    title: '30% Workflow Efficiency Gain',
-    src: 'https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&w=800&q=80',
-    exp: 'Automated internal reporting using n8n/Make.',
-    snippetCount: 0,
-    progress: 100,
-  },
 ];
