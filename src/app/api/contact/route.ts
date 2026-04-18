@@ -21,7 +21,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // 2. Premium Email UI Design
+    // 2.  Email UI Design
     const emailHtml = `
       <!DOCTYPE html>
       <html>

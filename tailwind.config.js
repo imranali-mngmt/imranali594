@@ -13,6 +13,7 @@ module.exports = {
                 btnHighlight: 'var(--btn-highlight)',
             },
             colors: {
+                brand: '#2bd576',
                 highlight: 'var(--text-highlight)',
                 primary: 'var(--text-primary)',
                 secondary: 'var(--text-secondary)',
