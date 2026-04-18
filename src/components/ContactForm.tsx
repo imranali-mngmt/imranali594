@@ -35,6 +35,9 @@ const ContactForm: FC<ContactFormProps> = ({ }) => {
         const { name, email, message } = formData;
         if (name && email && message) {
             try {
+                if (!supabase) {
+                    throw new Error('Supabase is not configured. Please add your environment variables to Vercel.');
+                }
                 const { error } = await supabase
                     .from('messages')
                     .insert([{ name, email, message }]);
