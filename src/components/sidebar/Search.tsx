@@ -1,6 +1,6 @@
 'use client';
 import { FC, useState, useEffect, useMemo } from 'react';
-import { Search as SearchIcon, X, Tag, LayOut } from 'lucide-react';
+import { Search as SearchIcon, X, Tag, Layout } from 'lucide-react';
 import { pageSections } from '@/data/pageSections';
 import { projectCard } from '@/components/utils/Data';
 
