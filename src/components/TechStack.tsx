@@ -12,42 +12,42 @@ const TechStack: FC<TechStackProps> = ({}) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <TechCard
           title="Backend"
-          classaName="bg-[#f37c36]"
+          className="bg-[#f37c36]"
           tech={['Node Js', 'Express Js', 'NoSQL', 'SQL', 'PostgreSQL', 'Docker', 'Kubernetes', 'Linux']}
         />
         <TechCard
           title="Databse"
-          classaName="bg-[#e0558a]"
+          className="bg-[#e0558a]"
           tech={['MongoDB', 'NoSQL', 'SQL', 'PostgreSQL', 'MySQL']}
         />
         <TechCard
           title="DevOps & OS"
-          classaName="bg-[#f37c36]"
+          className="bg-[#f37c36]"
           tech={['Docker', 'Kubernetes', 'Linux']}
         />
         <TechCard
           title="CRM Tools"
-          classaName="bg-[#4f91f2]"
+          className="bg-[#4f91f2]"
           tech={['Salesforce', 'Zendesk', 'Zoho CRM']}
         />
         <TechCard
           title="Operations"
-          classaName="bg-[#10c0a2]"
+          className="bg-[#10c0a2]"
           tech={['Jira', 'Trello', 'Slack', 'n8n', 'Make']}
         />
         <TechCard
           title="Client Relations"
-          classaName="bg-[#e0558a]"
+          className="bg-[#e0558a]"
           tech={['Intercom', 'HubSpot', 'Social Media Monitoring']}
         />
         <TechCard
           title="Office Tools"
-          classaName="bg-[#f37c36]"
+          className="bg-[#f37c36]"
           tech={['Advanced Excel', 'Google Workspace', 'Microsoft 365']}
         />
         <TechCard
           title="Management"
-          classaName="bg-[#4f91f2]"
+          className="bg-[#4f91f2]"
           tech={['Quality Auditing', 'SLA Compliance', 'Team Training', 'Escalations']}
         />
       </div>

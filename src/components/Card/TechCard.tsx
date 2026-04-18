@@ -5,11 +5,11 @@ import Button from '../ui/Button';
 
 interface TechCardProps {
   title: string;
-  classaName: string;
+  className: string;
   tech: string[];
 }
 
-const TechCard: FC<TechCardProps> = ({ title, classaName, tech }) => {
+const TechCard: FC<TechCardProps> = ({ title, className, tech }) => {
   return (
     <div className="flex-1 flex flex-col gap-4 bg-cardPrimary p-4 rounded-md shadow-lg">
       <div className="text-primary font-medium text-lg tracking-wider">
