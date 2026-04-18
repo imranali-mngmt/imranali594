@@ -46,13 +46,19 @@ const ContactForm: FC<ContactFormProps> = ({ }) => {
     
                 if (!error) {
                     // Trigger the automated email
-                    await fetch('/api/contact', {
+                    const emailRes = await fetch('/api/contact', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(formData),
                     });
 
-                    toast.success('Thanks for your message! I will get back to you soon.');
+                    if (emailRes.ok) {
+                        toast.success('Thanks! Message saved and Email notification sent.');
+                    } else {
+                        console.warn('DB saved, but Email failed to send. Check API keys.');
+                        toast('Message saved to DB, but email failed. Check logs.', { icon: '⚠️' });
+                    }
+
                     setFormVisibility();
                     setFormData({ name: '', email: '', message: '' }); // Clear form
                 } else {
