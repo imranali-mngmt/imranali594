@@ -45,6 +45,13 @@ const ContactForm: FC<ContactFormProps> = ({ }) => {
                 setLoader(false);
     
                 if (!error) {
+                    // Trigger the automated email
+                    await fetch('/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData),
+                    });
+
                     toast.success('Thanks for your message! I will get back to you soon.');
                     setFormVisibility();
                     setFormData({ name: '', email: '', message: '' }); // Clear form
